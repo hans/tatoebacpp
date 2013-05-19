@@ -180,15 +180,15 @@
  */
 <% template user_menu_module() %>
 <div class="module">
-    <h2>sysko</h2>
-    
+    <h2><%= user.username %></h2>
+
     <ul class="annexeMenu">
         <li class="item">
             <a href="<% url "/users/profile/{1}" using user.username %>">
                 <% gt "Profile" %>
             </a>
         </li>
-    
+
         <li class="item">
             <a href="<% url "/of-user/sentences-of/{1}" using user.username %>">
                 <% gt "Sentences" %>
