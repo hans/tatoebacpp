@@ -5,11 +5,41 @@
 
 <% template main_content() %>
     <div class="module">
-        <form method="POST" action="<% url "/sentences/add_treat" %>" >
-            <% form as_p addSentence %>
-        </form>
+        <h2><% gt "Add new sentences" %></h2>
+
+        <div class="sentences_set">
+            <form class="new" method="POST" action="<% url "/sentences/add_treat" %>">
+                <div class="input text">
+                    <label for="SentenceText"><% gt "Sentence:" %></label>
+                    <% form input addSentence.sentenceString %>
+                </div>
+                <div class="languageSelection">
+                    <% form input addSentence.sentenceLang %>
+                </div>
+
+                <% form input addSentence.submit %>
+            </form>
+        </div>
     </div>
 <% end %>
+
+<% template annexe_content() %>
+    <div class="module">
+        <h2><% gt "Important" %></h2>
+        <ol>
+            <li><% gt "Please do not forget <strong>capital letters</strong> and <strong>punctuation</strong>! Thank you." %></li>
+            <li><% gt "Do not copy-paste sentences from elsewhere, except if the content is CC-BY compatible." %> <a href="http://blog.tatoeba.org/2011/01/legally-valid-content.html"><% gt "Learn more..." %></a></li>
+        </ol>
+    </div>
+
+    <div class="module">
+        <h2><% gt "Tips" %></h2>
+        <ol>
+            <li><% gt "You can add sentences that you do not know how to translate. Perhaps someone else will know!" %></li>
+            <li><% gt "Or create sentences with <a href=\"http://a4esl.com/temporary/tatoeba/notyet/\">words not yet in Tatoeba</a>." %></li>
+        </ol>
+    </div>
+<% end template %>
 
 
 <% end view %>

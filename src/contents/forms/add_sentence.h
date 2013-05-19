@@ -32,7 +32,7 @@
 using namespace cppcms;
 
 namespace forms {
-    
+
     /**
      * @struct AddSentence
      * form to add a new sentence in the database
@@ -47,8 +47,8 @@ namespace forms {
          * is written
          */
         widgets::select sentenceLang;
-        widgets::submit submit;        
-    
+        widgets::submit submit;
+
         // init of the form
         /**
          * Constructor
@@ -59,11 +59,14 @@ namespace forms {
             add(submit);
 
             sentenceString.name("str");
+            sentenceString.id("SentenceText");
 
             sentenceLang.add("Unknown","und");
+            sentenceLang.id("contributionLang");
 
-            submit.name("Add sentence");
-            submit.value("add");
+            submit.name("add");
+            submit.value("OK");
+            submit.id("submitNewSentence");
 
             sentenceString.non_empty();
             // TODO for select I'm sure there's something more specific for
@@ -91,5 +94,3 @@ namespace forms {
 
 
 #endif
-
-
