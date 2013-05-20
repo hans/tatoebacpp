@@ -69,8 +69,9 @@ target_link_libraries(
     sqlite3
     #tokyodystopia
     sphinxclient
-    cv
-    highgui
+    opencv_core
+    opencv_imgproc
+    opencv_highgui
 )
 
 #add_executable(
