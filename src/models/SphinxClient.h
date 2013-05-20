@@ -33,7 +33,7 @@
 #include <winsock2.h>
 #endif
 
-#include "sphinxclient.h"
+#include <sphinxclient.h>
 #include "results/searches.h"
 
 
